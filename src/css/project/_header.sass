@@ -1,0 +1,67 @@
+.header
+  background-color: #222
+  left: 0
+  position: fixed
+  padding-top: 10px
+  padding-bottom: 10px
+  top: 0
+  width: 100%
+  z-index: 100
+
+  &__inner
+    align-items: center
+    display: flex
+    justify-content: space-between
+    padding-left: 15px
+    padding-right: 15px
+
+.logo
+  display: block
+  width: 150px
+
+.menu-opener
+  background-color: #A59595
+  border: 1px solid #A59595
+  border-radius: 4px
+  cursor: pointer
+  height: 40px
+  padding: 0
+  text-align: center
+  width: 40px
+
+  span
+    background-color: #fff
+    display: block
+    height: 3px
+    margin-left: auto
+    margin-right: auto
+    position: relative
+    width: 22px
+
+    &::after,
+    &::before
+      background-color: #fff
+      content: ""
+      height: 3px
+      left: 0
+      position: absolute
+      width: 22px
+
+    &::before
+      top: -8px
+
+    &::after
+      top: 8px
+
+  &.is-active
+    z-index: 100
+
+    span
+      transform: rotate(45deg)
+
+      &::before
+        top: 0
+        transform: rotate(-90deg)
+
+      &::after
+        display: none
